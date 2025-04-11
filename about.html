@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<title>About Hello, Operator</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="description" content="About Hello, Operator" />
+	<meta name="robots" content="noindex, nofollow" />
+	<!-- <style>
+    .loading body > *:not(#fls-preloader) {
+      opacity: 0;
+      visibility: hidden;
+    }
+    .loaded body > *:not(#fls-preloader) {
+      transition:
+        opacity 0.3s ease 0.1s,
+        visibility 0.3s ease 0.1s;
+      opacity: 1;
+      visibility: visible;
+    }
+  </style> -->
+	<!-- <link rel="shortcut icon" href="favicon.ico" /> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20250411192127" />
+</head>
+
+<body>
+	<div class="wrapper">
+		<header data-lp class="header">
+			<div class="header__container">
+				<a href="./" class="header__logo">
+					<img class="header__logo-img ibg ibg--contain" src="img/logo.svg " alt="logo" />
+				</a>
+				<div class="header__menu menu">
+					<nav class="menu__body">
+						<ul class="menu__list">
+							<li class="menu__item">
+								<a class="menu__link" href="about.html">About us</a>
+							</li>
+							<li class="menu__item">
+								<a class="menu__link" href="portfolio.html">portfolio</a>
+							</li>
+							<li class="menu__item">
+								<a class="menu__link" href="products.html">Products</a>
+							</li>
+							<li class="menu__item">
+								<a class="menu__link" href="contact.html">contact</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+				<div class="header__switcher">
+					<a href="#" class="header__switcher-link header__switcher-link--active">ENG</a>
+					<a href="be/" class="header__switcher-link header__switcher-link--no-active">BE</a>
+				</div>
+				<button aria-label="icon menu" type="button" class="icon-menu">
+					<span></span>
+				</button>
+			</div>
+		</header>
+
+		<main class="page">
+			<section class="page__hero hero">
+				<div class="hero__container">
+					<div class="hero__body">
+						<div class="block-header">
+							<h1 class="block-header__label labbel">Who we are</h1>
+							<div class="block-header__title">
+								<h2 class="title">Hello, Operator</h2>
+							</div>
+							<div class="block-header__text text">
+								<p>
+									Your<span> trusted partner</span> for seamless visual
+									productions. I’m a dedicated video operator based in
+									Belgium, specializing in delivering smooth, reliable
+									solutions for the broadcast and event industry.
+								</p>
+								<p>
+									With years of expertise in presentation switchers like
+									<span>Barco E2</span>, <span>Pixelhue</span>,and<span>
+										Vmix</span>, I ensure flawless video control for live productions,
+									corporate events, and congresses. Whether you’re managing a
+									high-stakes broadcast or a polished business presentation, I
+									adapt to your unique workflows to bring your vision to life.
+								</p>
+								<p>
+									I also offer <span>equipment rentals</span> to support your
+									production needs, pairing reliable gear with hands-on
+									expertise. Whether you need a skilled video technician or
+									cutting-edge tools, I’m here to help you create an
+									unforgettable experience.
+								</p>
+								<p>
+									At Hello, Operator, every frame counts, and every detail
+									matters.
+								</p>
+								<div>Let's elevate your production together.</div>
+							</div>
+							<div class="block-header__actions">
+								<a href="products.html" data-ripple class="button">Get in touch</a>
+							</div>
+						</div>
+					</div>
+					<div class="hero__content">
+						<img class="hero__image ibg ibg--contain" src="img/personal_photo.webp" alt="Jannes Callebaut photo" />
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer>
+			<script>
+				// для виділення активної сторінки в меню кольором
+				const currentUrl = window.location.pathname;
+				document.querySelectorAll(".menu__list a").forEach((link) => {
+					if (link.getAttribute("href") === currentUrl.split("/").pop()) {
+						link.classList.add("active");
+					}
+				});
+			</script>
+		</footer>
+		<!-- <footer class="footer">
+  <div class="footer__container">
+    <div class="footer__copy">
+      <div>
+        Power by:
+        <a class="footer__link" target="_blank" href="https://webintersol.com/"
+          >Web Interface Solutions
+        </a>
+        © 2025
+      </div>
+      <div>All rights reserved.</div>
+    </div>
+  </div>
+
+  <script>
+    // для виділення активної сторінки в меню кольором
+    const currentUrl = window.location.pathname;
+    document.querySelectorAll(".menu__list a").forEach((link) => {
+      if (link.getAttribute("href") === currentUrl.split("/").pop()) {
+        link.classList.add("active");
+      }
+    });
+  </script>
+</footer>
+ -->
+	</div>
+	<script src="js/app.min.js?_v=20250411192127"></script>
+</body>
+
+</html>
