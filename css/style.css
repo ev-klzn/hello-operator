@@ -174,7 +174,7 @@ body {
   justify-content: center;
   align-items: center
 }
-.button--tr {
+.button--transp {
   color: var(--chili,#be4c40);
   border: 2px solid var(--chili,#be4c40);
   background: var(--whitecap_snow,#fffefd)
@@ -1435,7 +1435,7 @@ html {
     background: var(--chaotic-red,#780600);
     box-shadow: 8px 8px 20px 0 rgba(66,4,0,.2)
   }
-  .button--tr:hover {
+  .button--transp:hover {
     color: var(--white,#fff);
     border: 2px solid var(--chaotic-red,#780600);
     background: var(--chaotic-red,#780600);
