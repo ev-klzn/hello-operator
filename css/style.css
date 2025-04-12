@@ -1,3 +1,6 @@
+@import url(https://fonts.googleapis.com/css?family=Assistant:regular,600&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Mate:regular&display=swap);
+/*! tailwindcss v4.1.2 | MIT License | https://tailwindcss.com */
 @font-face {
   font-family: icons;
   font-display: swap;
@@ -168,7 +171,7 @@ body {
   font-style: normal;
   font-weight: 600;
   line-height: normal;
-  transition: all .5s;
+  transition: all .3s;
   justify-content: center;
   align-items: center
 }
@@ -335,7 +338,7 @@ html {
   pointer-events: none
 }
 [class*=_link] {
-  transition: color .5s
+  transition: color .3s
 }
 .text {
   display: grid;
@@ -350,7 +353,7 @@ html {
   font-weight: 600
 }
 .header {
-  transition: padding-top .5s;
+  transition: padding-top .3s;
   position: fixed;
   width: 100%;
   z-index: 50;
@@ -395,7 +398,7 @@ html {
   position: relative;
   z-index: 100;
   text-transform: uppercase;
-  transition: .5s color;
+  transition: .3s color;
   color: var(--dark_eclipse,#0c2945)
 }
 .header__switcher-link--active {
@@ -422,7 +425,7 @@ html {
   color: var(--dark_eclipse,#0c2945);
   font-size: 1rem;
   text-transform: uppercase;
-  transition: .5s color
+  transition: .3s color
 }
 .icon-menu {
   margin-bottom: .375rem;
@@ -540,7 +543,7 @@ html {
 .item-works {
   display: block;
   width: 100%;
-  transition: all .5s;
+  transition: all .3s;
   overflow: hidden
 }
 .item-works__img {
@@ -549,13 +552,13 @@ html {
   position: relative
 }
 .item-works__image {
-  transition: all .5s;
+  transition: all .3s;
   overflow: hidden;
   -webkit-transform: scale(1.000001);
   transform: scale(1.000001)
 }
 .item-works__imagehover {
-  transition: all .5s;
+  transition: all .3s;
   top: 0;
   left: 0;
   z-index: 0;
@@ -572,7 +575,7 @@ html {
   align-items: center
 }
 .item-works__title {
-  transition: all .5s;
+  transition: all .3s;
   color: var(--dark_eclipse,#0c2945);
   font-family: Mate;
   font-size: 1.5rem;
@@ -581,9 +584,9 @@ html {
   line-height: normal
 }
 .item-works__link {
-  transition: -webkit-transform .5s;
-  transition: transform .5s;
-  transition: transform .5s,-webkit-transform .5s
+  transition: -webkit-transform .3s;
+  transition: transform .3s;
+  transition: transform .3s,-webkit-transform .3s
 }
 .item-works__tags {
   display: flex;
@@ -668,6 +671,7 @@ html {
   font-weight: 600
 }
 .item-rental__content {
+  justify-items: start;
   display: grid
 }
 .item-rental__content div div {
@@ -705,7 +709,7 @@ html {
   display: flex
 }
 .item-rental__actions {
-  display: flex;
+  display: inline-flex;
   font-size: 1.125rem;
   align-items: center;
   gap: 1rem;
@@ -713,7 +717,7 @@ html {
   margin-bottom: 1.5rem
 }
 .item-rental__icon {
-  transition: all .5s;
+  transition: all .3s;
   color: var(--chaotic-red,#780600)
 }
 .item-rental__more {
@@ -1048,7 +1052,7 @@ html {
     top: 0;
     overflow: auto;
     padding: 3.125rem .9375rem 1.875rem .9375rem;
-    transition: left .5s
+    transition: left .3s
   }
   .menu__body::before {
     content: "";
@@ -1057,7 +1061,7 @@ html {
     height: 4.375rem;
     left: -100%;
     top: 0;
-    transition: left .5s;
+    transition: left .3s;
     z-index: 2
   }
   .menu-open .menu__body {
@@ -1077,7 +1081,7 @@ html {
   .icon-menu::after,
   .icon-menu::before {
     content: "";
-    transition: all .5s ease 0s;
+    transition: all .3s ease 0s;
     right: 0;
     position: absolute;
     width: 100%;
@@ -1163,7 +1167,7 @@ html {
     background: var(--whitecap_snow,#fffefd);
     display: grid;
     grid-template-rows: 1fr auto;
-    transition: left .5s
+    transition: left .3s
   }
   .menu__body::before {
     content: "";
@@ -1173,7 +1177,7 @@ html {
     height: 4.375rem;
     left: -100%;
     top: 0;
-    transition: left .5s;
+    transition: left .3s;
     z-index: 101
   }
   .menu__body::after {
@@ -1221,7 +1225,7 @@ html {
   .icon-menu::after,
   .icon-menu::before {
     content: "";
-    transition: all .5s ease 0s;
+    transition: all .3s ease 0s;
     right: 0;
     position: absolute;
     width: 100%;
