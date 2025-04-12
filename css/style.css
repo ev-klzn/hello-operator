@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@400; 600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@400;600&display=swap');
 @import url(https://fonts.googleapis.com/css2?family=Mate:wght@400&display=swap);
 @font-face {
   font-family: icons;
@@ -126,7 +126,7 @@ body {
 }
 .loaded body {
   opacity: 1;
-  transition: opacity .75s
+  transition: opacity .3s
 }
 .wrapper {
   min-height: 100%;
@@ -306,6 +306,23 @@ html {
   display: flex;
   row-gap: 1rem;
   flex-wrap: wrap
+}
+.block-header .social {
+  display: grid;
+  gap: 2rem
+}
+.block-header .social__link {
+  font-size: 1.5rem;
+  gap: 2rem;
+  display: inline-flex;
+  align-items: center;
+  align-self: center
+}
+.block-header .social__link::before {
+  font-size: 2.5rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  flex: 0 0 2.5rem
 }
 [class*="--no-wrap"] {
   white-space: nowrap
@@ -735,6 +752,12 @@ html {
     -moz-column-gap: 2.5rem;
     column-gap: 2.5rem
   }
+  .block-header .social {
+    padding-left: 7.3125rem
+  }
+  .block-header .social__link {
+    gap: 2rem
+  }
   .header__container {
     -webkit-column-gap: 3.125rem;
     -moz-column-gap: 3.125rem;
@@ -899,6 +922,9 @@ html {
     -moz-column-gap: 2rem;
     column-gap: 2rem
   }
+  .block-header .social__link {
+    gap: .5rem
+  }
   .header__logo {
     gap: .9375rem
   }
@@ -1002,6 +1028,9 @@ html {
   .button {
     width: 100%
   }
+  .block-header .social {
+    padding-left: .0000000625rem
+  }
   .header {
     padding-top: .0000000625rem
   }
@@ -1084,6 +1113,15 @@ html {
   }
   .block-header__actions .buttton {
     text-align: center
+  }
+  .block-header .social__link::before {
+    font-size: 1.375rem;
+    width: 1.375rem;
+    height: 1.375rem;
+    flex: 0 0 1.375rem
+  }
+  .block-header .social__link {
+    font-size: 1.25rem
   }
   .header__container {
     -webkit-column-gap: .9375rem;
@@ -1280,6 +1318,11 @@ html {
     cursor: default
   }
 }
+@media (max-width:22.375em) {
+  .block-header .social__link {
+    font-size: 1.125rem
+  }
+}
 @media (min-width:48em)and (max-width:120em) {
   .button {
     padding-left: clamp(2rem ,1rem + 2.0833333333vw ,3.5rem)
@@ -1302,6 +1345,9 @@ html {
     -webkit-column-gap: clamp(2rem ,1.8510242086rem + .7448789572vw ,2.5rem);
     -moz-column-gap: clamp(2rem ,1.8510242086rem + .7448789572vw ,2.5rem);
     column-gap: clamp(2rem ,1.8510242086rem + .7448789572vw ,2.5rem)
+  }
+  .block-header .social__link {
+    gap: clamp(.5rem ,.0530726257rem + 2.2346368715vw ,2rem)
   }
   .header__logo {
     gap: clamp(.9375rem ,.7699022346rem + .8379888268vw ,1.5rem)
@@ -1384,6 +1430,11 @@ html {
   }
   .item-rental__content div div {
     gap: clamp(1.5rem ,1.3882681564rem + .5586592179vw ,1.875rem)
+  }
+}
+@media (min-width:61.99875em)and (max-width:87.125em) {
+  .block-header .social {
+    padding-left: clamp(.0000000625rem ,-18.0435144094rem + 29.1030294513vw ,7.3125rem)
   }
 }
 @media (min-width:61.99875em)and (max-width:120em) {
