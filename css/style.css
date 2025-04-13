@@ -1,10 +1,28 @@
-@import url(https://fonts.googleapis.com/css?family=Assistant:regular,600&display=swap);
-@import url(https://fonts.googleapis.com/css?family=Mate:regular&display=swap);
-/*! tailwindcss v4.1.2 | MIT License | https://tailwindcss.com */
 @font-face {
   font-family: icons;
   font-display: swap;
   src: url(../fonts/icons.woff2) format("woff2");
+  font-weight: 400;
+  font-style: normal
+}
+@font-face {
+  font-family: Assistant;
+  font-display: swap;
+  src: url(../fonts/Assistant-Regular.woff2) format("woff2");
+  font-weight: 400;
+  font-style: normal
+}
+@font-face {
+  font-family: Assistant;
+  font-display: swap;
+  src: url(../fonts/Assistant-SemiBold.woff2) format("woff2");
+  font-weight: 600;
+  font-style: normal
+}
+@font-face {
+  font-family: Mate;
+  font-display: swap;
+  src: url(../fonts/Mate-Regular.woff2) format("woff2");
   font-weight: 400;
   font-style: normal
 }
