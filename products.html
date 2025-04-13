@@ -9,7 +9,7 @@
 	<meta name="description" content="Hello, Operator Products">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<!-- <link rel="shortcut icon" href="favicon.ico"> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20250413084617">
+	<link rel="stylesheet" href="css/style.min.css?_v=20250413101522">
 </head>
 
 <body>
@@ -23,7 +23,7 @@
 					<nav class="menu__body">
 						<ul class="menu__list">
 							<li class="menu__item">
-								<a class="menu__link" href="about_us.html">About us</a>
+								<a class="menu__link" href="about.html">About us</a>
 							</li>
 							<li class="menu__item">
 								<a class="menu__link" href="portfolio.html">portfolio</a>
@@ -51,11 +51,13 @@
 			<section class="page__rental rental">
 				<div class="rental__container">
 					<div class="block-header">
-						<h1 class="block-header__label labbel">Products catalog</h1>
-						<div class="block-header__title">
+						<h1 data-watch data-watch-once class="block-header__label labbel">
+							Products catalog
+						</h1>
+						<div data-watch data-watch-once class="block-header__title">
 							<h2 class="title">Rental Equipment</h2>
 						</div>
-						<div class="block-header__text text">
+						<div data-watch data-watch-once class="block-header__text text">
 							<p>
 								Browse our selection of high-quality equipment available for
 								short- or long-term rental — perfect for events, production,
@@ -64,13 +66,13 @@
 						</div>
 					</div>
 					<ul class="rental__list">
-						<li class="rental__item item-rental">
+						<li data-watch data-watch-once class="rental__item item-rental">
 							<div class="item-rental__header">
 								<div>
-									<img src="img/rental_items/pixelhue_video_processor_p10/1.webp" alt="Pixelhue Video processor P10 Image" />
-									<img src="img/rental_items/pixelhue_video_processor_p10/2.webp" alt="Pixelhue Video processor P10 Image" />
+									<img data-watch data-watch-once data-watch-threshold="0.2" src="img/rental_items/pixelhue_video_processor_p10/1.webp" alt="Pixelhue Video processor P10 Image" />
+									<img data-watch data-watch-once data-watch-threshold="0.2" src="img/rental_items/pixelhue_video_processor_p10/2.webp" alt="Pixelhue Video processor P10 Image" />
 								</div>
-								<h2 class="item-rental__title">
+								<h2 data-watch data-watch-once data-watch-threshold="0.2" class="item-rental__title">
 									Pixelhue Video processor P10
 								</h2>
 							</div>
@@ -117,8 +119,8 @@
 										</div>
 										<div>
 											<div>
-												<img src="img/rental_items/pixelhue_video_processor_p10/3.webp" alt="Pixelhue Video processor P10 Image" />
-												<img src="img/rental_items/pixelhue_video_processor_p10/4.webp" alt="Pixelhue Video processor P10 Image" />
+												<img data-watch data-watch-once data-watch-threshold="0.2" src="img/rental_items/pixelhue_video_processor_p10/3.webp" alt="Pixelhue Video processor P10 Image" />
+												<img data-watch data-watch-once data-watch-threshold="0.2" src="img/rental_items/pixelhue_video_processor_p10/4.webp" alt="Pixelhue Video processor P10 Image" />
 											</div>
 										</div>
 										<div class="item-rental__text text">
@@ -158,8 +160,8 @@
 										</div>
 										<div>
 											<div>
-												<img src="img/rental_items/pixelhue_video_processor_p10/5.webp" alt="Pixelhue Video processor P10Image" />
-												<img src="img/rental_items/pixelhue_video_processor_p10/6.webp" alt="Pixelhue Video processor P10Image" />
+												<img data-watch data-watch-once data-watch-threshold="0.2" src="img/rental_items/pixelhue_video_processor_p10/5.webp" alt="Pixelhue Video processor P10Image" />
+												<img data-watch data-watch-once data-watch-threshold="0.2" src="img/rental_items/pixelhue_video_processor_p10/6.webp" alt="Pixelhue Video processor P10Image" />
 											</div>
 										</div>
 										<div class="item-rental__text text">
@@ -178,7 +180,7 @@
 												products highly reliable and worry-free.
 											</p>
 										</div>
-										<a target="_blank" href="https://www.pixelhue.com/index.php/content/products_detail/catid/64/id/20.html" class="item-rental__actions">
+										<a data-watch data-watch-once data-watch-threshold="0.2" target="_blank" href="https://www.pixelhue.com/index.php/content/products_detail/catid/64/id/20.html" class="item-rental__actions">
 											<span class="item-rental__link">
 												Read full description on product website
 											</span>
@@ -192,11 +194,15 @@
 									</div>
 								</div>
 							</div>
-							<!-- Calendly link widget begin -->
-							<link href="https://assets.calendly.com/assets/external/widget.css?_v=20250413084617" rel="stylesheet" />
-							<script src="https://assets.calendly.com/assets/external/widget.js?_v=20250413084617" type="text/javascript" async></script>
-							<a class="item-rental__rental button" href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/ev-klzn/new-meeting'});return false;">Reserve Equipment</a>
-							<!-- Calendly link widget end -->
+							<div data-watch data-watch-once data-watch-threshold="0.2" class="item-rental__rental">
+								<button class="button">
+									<!-- Calendly link widget begin -->
+									<link href="https://assets.calendly.com/assets/external/widget.css?_v=20250413101522" rel="stylesheet" />
+									<script src="https://assets.calendly.com/assets/external/widget.js?_v=20250413101522" type="text/javascript" async></script>
+									<a class="" href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/ev-klzn/new-meeting'});return false;">Reserve Equipment</a>
+									<!-- Calendly link widget end -->
+								</button>
+							</div>
 						</li>
 					</ul>
 				</div>
@@ -217,7 +223,7 @@
 		</footer>
 
 	</div>
-	<script src="js/app.min.js?_v=20250413084617"></script>
+	<script src="js/app.min.js?_v=20250413101522"></script>
 
 </body>
 
