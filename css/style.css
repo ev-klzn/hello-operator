@@ -134,6 +134,7 @@ h6 {
 }
 body {
   line-height: normal;
+  opacity: 0;
   background-color: var(--whitecap_snow,#fffefd)
 }
 .lock body {
@@ -141,6 +142,10 @@ body {
   touch-action: none;
   -ms-scroll-chaining: none;
   overscroll-behavior: none
+}
+.loaded body {
+  opacity: 1;
+  transition: opacity .1s
 }
 .wrapper {
   min-height: 100%;
@@ -352,6 +357,12 @@ html {
 }
 [class*=_link] {
   transition: color .3s
+}
+[class*=current-menu-item] {
+  color: var(--chili,#be4c40)
+}
+[class*=current-menu-item] a {
+  color: var(--chili,#be4c40)
 }
 .text {
   display: grid;
