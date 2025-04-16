@@ -349,57 +349,32 @@ html {
 }
 .block-header .social {
   display: grid;
-  gap: 2rem
+  gap: 2rem;
+  justify-items: start;
+  opacity: 0;
+  -webkit-transform: translate(0,5%);
+  transform: translate(0,5%);
+  transition: color .5s,opacity .5s,-webkit-transform .5s;
+  transition: color .5s,opacity .5s,transform .5s;
+  transition: color .5s,opacity .5s,transform .5s,-webkit-transform .5s
+}
+.block-header .social._watcher-view {
+  opacity: 1;
+  -webkit-transform: translate(0,0);
+  transform: translate(0,0);
+  transition-delay: .4s
 }
 .block-header .social__link {
-  opacity: 0;
-  -webkit-transform: translate(0,10%);
-  transform: translate(0,10%);
-  transition: opacity .5s,-webkit-transform .5s;
-  transition: opacity .5s,transform .5s;
-  transition: opacity .5s,transform .5s,-webkit-transform .5s;
   font-size: 1.5rem;
   gap: 2rem;
   display: inline-flex;
   align-items: center;
   align-self: center
 }
-.block-header .social__link._watcher-view {
-  opacity: 1;
-  -webkit-transform: translate(0,0);
-  transform: translate(0,0)
-}
-.block-header .social__link._watcher-view:nth-child(1) {
-  transition-delay: .5s
-}
-.block-header .social__link._watcher-view:nth-child(2) {
-  transition-delay: .6s
-}
-.block-header .social__link._watcher-view:nth-child(3) {
-  transition-delay: .7s
-}
-.block-header .social__link._watcher-view:nth-child(4) {
-  transition-delay: .8s
-}
-.block-header .social__link._watcher-view:nth-child(5) {
-  transition-delay: .9s
-}
-.block-header .social__link._watcher-view:nth-child(6) {
-  transition-delay: 1s
-}
-.block-header .social__link._watcher-view:nth-child(7) {
-  transition-delay: 1.1s
-}
-.block-header .social__link._watcher-view:nth-child(8) {
-  transition-delay: 1.2s
-}
-.block-header .social__link._watcher-view:nth-child(9) {
-  transition-delay: 1.3s
-}
-.block-header .social__link._watcher-view:nth-child(10) {
-  transition-delay: 1.4s
-}
 .block-header .social__link::before {
+  transition: all .5s;
+  -webkit-transform: scale(1.00001);
+  transform: scale(1.00001);
   font-size: 2.5rem;
   width: 2.5rem;
   height: 2.5rem;
@@ -439,15 +414,19 @@ html {
   font-weight: 600
 }
 .header {
-  transition: padding-top .3s;
+  transition: padding-bottom .5s,padding-top .5s;
   position: fixed;
   width: 100%;
   z-index: 50;
   background: var(--whitecap_snow,#fffefd);
   color: #fff
 }
+.header._header-scroll .header__container {
+  padding-bottom: .9375rem
+}
 .header__container {
   padding-bottom: 2.5rem;
+  transition: all .5s;
   position: relative;
   display: grid;
   z-index: 550;
@@ -615,7 +594,7 @@ html {
 }
 .hero__body {
   height: 100%;
-  padding-block: 1.25rem;
+  padding-block: .9375rem;
   display: grid;
   align-items: center;
   max-width: 40rem;
@@ -953,6 +932,7 @@ html {
   overflow: hidden
 }
 .item-works__img {
+  aspect-ratio: 670/520;
   overflow: hidden;
   margin-bottom: 1.5rem;
   position: relative
@@ -1049,20 +1029,22 @@ html {
 .work__date-item {
   font-size: 1.125rem
 }
-.work__img img {
+.work__img img,
+.work__img video {
   -webkit-transform: translate(0,3%);
   transform: translate(0,3%);
   transition: -webkit-transform .5s;
   transition: transform .5s;
   transition: transform .5s,-webkit-transform .5s
 }
-.work__img img._watcher-view {
+.work__img img._watcher-view,
+.work__img video._watcher-view {
   transition-delay: .2s;
   -webkit-transform: translate(0,0);
   transform: translate(0,0)
 }
 .work__image {
-  aspect-ratio: 1920/1080;
+  aspect-ratio: 1920/1280;
   margin-bottom: 2rem
 }
 .rental__list {
@@ -1079,7 +1061,13 @@ html {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-  object-fit: cover
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity .5s;
+  transition-delay: .2s
+}
+.item-rental__header div img._watcher-view {
+  opacity: 1
 }
 .item-rental__title {
   font-family: Mate;
@@ -1114,8 +1102,8 @@ html {
   -o-object-fit: cover;
   object-fit: cover;
   opacity: 0;
-  -webkit-transform: translate(0,10%);
-  transform: translate(0,10%);
+  -webkit-transform: translate(0,5%);
+  transform: translate(0,5%);
   transition: opacity .5s,-webkit-transform .5s;
   transition: opacity .5s,transform .5s;
   transition: opacity .5s,transform .5s,-webkit-transform .5s
@@ -1126,304 +1114,64 @@ html {
   transform: translate(0,0)
 }
 .item-rental__content div div img._watcher-view:nth-child(1) {
-  transition-delay: 175ms
-}
-.item-rental__content div div img._watcher-view:nth-child(2) {
-  transition-delay: .25s
-}
-.item-rental__content div div img._watcher-view:nth-child(3) {
-  transition-delay: 325ms
-}
-.item-rental__content div div img._watcher-view:nth-child(4) {
-  transition-delay: .4s
-}
-.item-rental__content div div img._watcher-view:nth-child(5) {
   transition-delay: 475ms
 }
-.item-rental__content div div img._watcher-view:nth-child(6) {
+.item-rental__content div div img._watcher-view:nth-child(2) {
   transition-delay: .55s
 }
-.item-rental__content div div img._watcher-view:nth-child(7) {
+.item-rental__content div div img._watcher-view:nth-child(3) {
   transition-delay: 625ms
 }
-.item-rental__content div div img._watcher-view:nth-child(8) {
+.item-rental__content div div img._watcher-view:nth-child(4) {
   transition-delay: .7s
 }
-.item-rental__content div div img._watcher-view:nth-child(9) {
+.item-rental__content div div img._watcher-view:nth-child(5) {
   transition-delay: 775ms
 }
-.item-rental__content div div img._watcher-view:nth-child(10) {
+.item-rental__content div div img._watcher-view:nth-child(6) {
   transition-delay: .85s
 }
-.item-rental__content div div img._watcher-view:nth-child(11) {
+.item-rental__content div div img._watcher-view:nth-child(7) {
   transition-delay: 925ms
 }
-.item-rental__content div div img._watcher-view:nth-child(12) {
+.item-rental__content div div img._watcher-view:nth-child(8) {
   transition-delay: 1s
 }
-.item-rental__content div div img._watcher-view:nth-child(13) {
+.item-rental__content div div img._watcher-view:nth-child(9) {
   transition-delay: 1.075s
 }
-.item-rental__content div div img._watcher-view:nth-child(14) {
+.item-rental__content div div img._watcher-view:nth-child(10) {
   transition-delay: 1.15s
 }
-.item-rental__content div div img._watcher-view:nth-child(15) {
+.item-rental__content div div img._watcher-view:nth-child(11) {
   transition-delay: 1.225s
 }
-.item-rental__content div div img._watcher-view:nth-child(16) {
+.item-rental__content div div img._watcher-view:nth-child(12) {
   transition-delay: 1.3s
 }
-.item-rental__content div div img._watcher-view:nth-child(17) {
+.item-rental__content div div img._watcher-view:nth-child(13) {
   transition-delay: 1.375s
 }
-.item-rental__content div div img._watcher-view:nth-child(18) {
+.item-rental__content div div img._watcher-view:nth-child(14) {
   transition-delay: 1.45s
 }
-.item-rental__content div div img._watcher-view:nth-child(19) {
+.item-rental__content div div img._watcher-view:nth-child(15) {
   transition-delay: 1.525s
 }
-.item-rental__content div div img._watcher-view:nth-child(20) {
+.item-rental__content div div img._watcher-view:nth-child(16) {
   transition-delay: 1.6s
 }
-.item-rental__content div div img._watcher-view:nth-child(21) {
+.item-rental__content div div img._watcher-view:nth-child(17) {
   transition-delay: 1.675s
 }
-.item-rental__content div div img._watcher-view:nth-child(22) {
+.item-rental__content div div img._watcher-view:nth-child(18) {
   transition-delay: 1.75s
 }
-.item-rental__content div div img._watcher-view:nth-child(23) {
+.item-rental__content div div img._watcher-view:nth-child(19) {
   transition-delay: 1.825s
 }
-.item-rental__content div div img._watcher-view:nth-child(24) {
+.item-rental__content div div img._watcher-view:nth-child(20) {
   transition-delay: 1.9s
-}
-.item-rental__content div div img._watcher-view:nth-child(25) {
-  transition-delay: 1.975s
-}
-.item-rental__content div div img._watcher-view:nth-child(26) {
-  transition-delay: 2.05s
-}
-.item-rental__content div div img._watcher-view:nth-child(27) {
-  transition-delay: 2.125s
-}
-.item-rental__content div div img._watcher-view:nth-child(28) {
-  transition-delay: 2.2s
-}
-.item-rental__content div div img._watcher-view:nth-child(29) {
-  transition-delay: 2.275s
-}
-.item-rental__content div div img._watcher-view:nth-child(30) {
-  transition-delay: 2.35s
-}
-.item-rental__content div div img._watcher-view:nth-child(31) {
-  transition-delay: 2.425s
-}
-.item-rental__content div div img._watcher-view:nth-child(32) {
-  transition-delay: 2.5s
-}
-.item-rental__content div div img._watcher-view:nth-child(33) {
-  transition-delay: 2.575s
-}
-.item-rental__content div div img._watcher-view:nth-child(34) {
-  transition-delay: 2.65s
-}
-.item-rental__content div div img._watcher-view:nth-child(35) {
-  transition-delay: 2.725s
-}
-.item-rental__content div div img._watcher-view:nth-child(36) {
-  transition-delay: 2.8s
-}
-.item-rental__content div div img._watcher-view:nth-child(37) {
-  transition-delay: 2.875s
-}
-.item-rental__content div div img._watcher-view:nth-child(38) {
-  transition-delay: 2.95s
-}
-.item-rental__content div div img._watcher-view:nth-child(39) {
-  transition-delay: 3.025s
-}
-.item-rental__content div div img._watcher-view:nth-child(40) {
-  transition-delay: 3.1s
-}
-.item-rental__content div div img._watcher-view:nth-child(41) {
-  transition-delay: 3.175s
-}
-.item-rental__content div div img._watcher-view:nth-child(42) {
-  transition-delay: 3.25s
-}
-.item-rental__content div div img._watcher-view:nth-child(43) {
-  transition-delay: 3.325s
-}
-.item-rental__content div div img._watcher-view:nth-child(44) {
-  transition-delay: 3.4s
-}
-.item-rental__content div div img._watcher-view:nth-child(45) {
-  transition-delay: 3.475s
-}
-.item-rental__content div div img._watcher-view:nth-child(46) {
-  transition-delay: 3.55s
-}
-.item-rental__content div div img._watcher-view:nth-child(47) {
-  transition-delay: 3.625s
-}
-.item-rental__content div div img._watcher-view:nth-child(48) {
-  transition-delay: 3.7s
-}
-.item-rental__content div div img._watcher-view:nth-child(49) {
-  transition-delay: 3.775s
-}
-.item-rental__content div div img._watcher-view:nth-child(50) {
-  transition-delay: 3.85s
-}
-.item-rental__content div div img._watcher-view:nth-child(51) {
-  transition-delay: 3.925s
-}
-.item-rental__content div div img._watcher-view:nth-child(52) {
-  transition-delay: 4s
-}
-.item-rental__content div div img._watcher-view:nth-child(53) {
-  transition-delay: 4.075s
-}
-.item-rental__content div div img._watcher-view:nth-child(54) {
-  transition-delay: 4.15s
-}
-.item-rental__content div div img._watcher-view:nth-child(55) {
-  transition-delay: 4.225s
-}
-.item-rental__content div div img._watcher-view:nth-child(56) {
-  transition-delay: 4.3s
-}
-.item-rental__content div div img._watcher-view:nth-child(57) {
-  transition-delay: 4.375s
-}
-.item-rental__content div div img._watcher-view:nth-child(58) {
-  transition-delay: 4.45s
-}
-.item-rental__content div div img._watcher-view:nth-child(59) {
-  transition-delay: 4.525s
-}
-.item-rental__content div div img._watcher-view:nth-child(60) {
-  transition-delay: 4.6s
-}
-.item-rental__content div div img._watcher-view:nth-child(61) {
-  transition-delay: 4.675s
-}
-.item-rental__content div div img._watcher-view:nth-child(62) {
-  transition-delay: 4.75s
-}
-.item-rental__content div div img._watcher-view:nth-child(63) {
-  transition-delay: 4.825s
-}
-.item-rental__content div div img._watcher-view:nth-child(64) {
-  transition-delay: 4.9s
-}
-.item-rental__content div div img._watcher-view:nth-child(65) {
-  transition-delay: 4.975s
-}
-.item-rental__content div div img._watcher-view:nth-child(66) {
-  transition-delay: 5.05s
-}
-.item-rental__content div div img._watcher-view:nth-child(67) {
-  transition-delay: 5.125s
-}
-.item-rental__content div div img._watcher-view:nth-child(68) {
-  transition-delay: 5.2s
-}
-.item-rental__content div div img._watcher-view:nth-child(69) {
-  transition-delay: 5.275s
-}
-.item-rental__content div div img._watcher-view:nth-child(70) {
-  transition-delay: 5.35s
-}
-.item-rental__content div div img._watcher-view:nth-child(71) {
-  transition-delay: 5.425s
-}
-.item-rental__content div div img._watcher-view:nth-child(72) {
-  transition-delay: 5.5s
-}
-.item-rental__content div div img._watcher-view:nth-child(73) {
-  transition-delay: 5.575s
-}
-.item-rental__content div div img._watcher-view:nth-child(74) {
-  transition-delay: 5.65s
-}
-.item-rental__content div div img._watcher-view:nth-child(75) {
-  transition-delay: 5.725s
-}
-.item-rental__content div div img._watcher-view:nth-child(76) {
-  transition-delay: 5.8s
-}
-.item-rental__content div div img._watcher-view:nth-child(77) {
-  transition-delay: 5.875s
-}
-.item-rental__content div div img._watcher-view:nth-child(78) {
-  transition-delay: 5.95s
-}
-.item-rental__content div div img._watcher-view:nth-child(79) {
-  transition-delay: 6.025s
-}
-.item-rental__content div div img._watcher-view:nth-child(80) {
-  transition-delay: 6.1s
-}
-.item-rental__content div div img._watcher-view:nth-child(81) {
-  transition-delay: 6.175s
-}
-.item-rental__content div div img._watcher-view:nth-child(82) {
-  transition-delay: 6.25s
-}
-.item-rental__content div div img._watcher-view:nth-child(83) {
-  transition-delay: 6.325s
-}
-.item-rental__content div div img._watcher-view:nth-child(84) {
-  transition-delay: 6.4s
-}
-.item-rental__content div div img._watcher-view:nth-child(85) {
-  transition-delay: 6.475s
-}
-.item-rental__content div div img._watcher-view:nth-child(86) {
-  transition-delay: 6.55s
-}
-.item-rental__content div div img._watcher-view:nth-child(87) {
-  transition-delay: 6.625s
-}
-.item-rental__content div div img._watcher-view:nth-child(88) {
-  transition-delay: 6.7s
-}
-.item-rental__content div div img._watcher-view:nth-child(89) {
-  transition-delay: 6.775s
-}
-.item-rental__content div div img._watcher-view:nth-child(90) {
-  transition-delay: 6.85s
-}
-.item-rental__content div div img._watcher-view:nth-child(91) {
-  transition-delay: 6.925s
-}
-.item-rental__content div div img._watcher-view:nth-child(92) {
-  transition-delay: 7s
-}
-.item-rental__content div div img._watcher-view:nth-child(93) {
-  transition-delay: 7.075s
-}
-.item-rental__content div div img._watcher-view:nth-child(94) {
-  transition-delay: 7.15s
-}
-.item-rental__content div div img._watcher-view:nth-child(95) {
-  transition-delay: 7.225s
-}
-.item-rental__content div div img._watcher-view:nth-child(96) {
-  transition-delay: 7.3s
-}
-.item-rental__content div div img._watcher-view:nth-child(97) {
-  transition-delay: 7.375s
-}
-.item-rental__content div div img._watcher-view:nth-child(98) {
-  transition-delay: 7.45s
-}
-.item-rental__content div div img._watcher-view:nth-child(99) {
-  transition-delay: 7.525s
-}
-.item-rental__content div div img._watcher-view:nth-child(100) {
-  transition-delay: 7.6s
 }
 .item-rental__text h2,
 .item-rental__text h3,
@@ -1483,6 +1231,12 @@ html {
   -webkit-transform: translate(0,0);
   transform: translate(0,0);
   opacity: 1
+}
+@media (min-width:61.99875em) {
+  .header._header-scroll {
+    padding-top: 0;
+    padding-bottom: 0
+  }
 }
 @media (min-width:83.75em) {
   .hero__container .hero__image {
@@ -1896,14 +1650,14 @@ html {
     gap: .5rem;
     grid-template-columns: auto 1fr auto auto;
     align-items: end;
-    padding-bottom: 1.875rem
+    padding-bottom: 1.125rem
   }
   .header__container::after {
     position: absolute;
     content: "";
     width: calc(100% - 1.875rem);
     height: .0625rem;
-    top: 80%;
+    top: 100%;
     left: .9375rem;
     background: #eeb9b3
   }
@@ -2023,7 +1777,7 @@ html {
     text-align: center
   }
   .page__hero {
-    padding-top: 6.25rem;
+    padding-top: 5rem;
     padding-bottom: 2.5rem
   }
   .page__works {
@@ -2382,6 +2136,311 @@ html {
   .item-rental__content div div {
     grid-template-columns: auto
   }
+  .item-rental__content div div img._watcher-view {
+    opacity: 1;
+    -webkit-transform: translate(0,0);
+    transform: translate(0,0)
+  }
+  .item-rental__content div div img._watcher-view:nth-child(1) {
+    transition-delay: 101ms
+  }
+  .item-rental__content div div img._watcher-view:nth-child(2) {
+    transition-delay: 102ms
+  }
+  .item-rental__content div div img._watcher-view:nth-child(3) {
+    transition-delay: 103ms
+  }
+  .item-rental__content div div img._watcher-view:nth-child(4) {
+    transition-delay: 104ms
+  }
+  .item-rental__content div div img._watcher-view:nth-child(5) {
+    transition-delay: 105ms
+  }
+  .item-rental__content div div img._watcher-view:nth-child(6) {
+    transition-delay: 106ms
+  }
+  .item-rental__content div div img._watcher-view:nth-child(7) {
+    transition-delay: 107ms
+  }
+  .item-rental__content div div img._watcher-view:nth-child(8) {
+    transition-delay: 108ms
+  }
+  .item-rental__content div div img._watcher-view:nth-child(9) {
+    transition-delay: 109ms
+  }
+  .item-rental__content div div img._watcher-view:nth-child(10) {
+    transition-delay: .11s
+  }
+  .item-rental__content div div img._watcher-view:nth-child(11) {
+    transition-delay: 111ms
+  }
+  .item-rental__content div div img._watcher-view:nth-child(12) {
+    transition-delay: 112ms
+  }
+  .item-rental__content div div img._watcher-view:nth-child(13) {
+    transition-delay: 113ms
+  }
+  .item-rental__content div div img._watcher-view:nth-child(14) {
+    transition-delay: 114ms
+  }
+  .item-rental__content div div img._watcher-view:nth-child(15) {
+    transition-delay: 115ms
+  }
+  .item-rental__content div div img._watcher-view:nth-child(16) {
+    transition-delay: 116ms
+  }
+  .item-rental__content div div img._watcher-view:nth-child(17) {
+    transition-delay: 117ms
+  }
+  .item-rental__content div div img._watcher-view:nth-child(18) {
+    transition-delay: 118ms
+  }
+  .item-rental__content div div img._watcher-view:nth-child(19) {
+    transition-delay: 119ms
+  }
+  .item-rental__content div div img._watcher-view:nth-child(20) {
+    transition-delay: .12s
+  }
+  .item-rental__content div div img._watcher-view:nth-child(21) {
+    transition-delay: 121ms
+  }
+  .item-rental__content div div img._watcher-view:nth-child(22) {
+    transition-delay: 122ms
+  }
+  .item-rental__content div div img._watcher-view:nth-child(23) {
+    transition-delay: 123ms
+  }
+  .item-rental__content div div img._watcher-view:nth-child(24) {
+    transition-delay: 124ms
+  }
+  .item-rental__content div div img._watcher-view:nth-child(25) {
+    transition-delay: 125ms
+  }
+  .item-rental__content div div img._watcher-view:nth-child(26) {
+    transition-delay: 126ms
+  }
+  .item-rental__content div div img._watcher-view:nth-child(27) {
+    transition-delay: 127ms
+  }
+  .item-rental__content div div img._watcher-view:nth-child(28) {
+    transition-delay: 128ms
+  }
+  .item-rental__content div div img._watcher-view:nth-child(29) {
+    transition-delay: 129ms
+  }
+  .item-rental__content div div img._watcher-view:nth-child(30) {
+    transition-delay: .13s
+  }
+  .item-rental__content div div img._watcher-view:nth-child(31) {
+    transition-delay: 131ms
+  }
+  .item-rental__content div div img._watcher-view:nth-child(32) {
+    transition-delay: 132ms
+  }
+  .item-rental__content div div img._watcher-view:nth-child(33) {
+    transition-delay: 133ms
+  }
+  .item-rental__content div div img._watcher-view:nth-child(34) {
+    transition-delay: 134ms
+  }
+  .item-rental__content div div img._watcher-view:nth-child(35) {
+    transition-delay: 135ms
+  }
+  .item-rental__content div div img._watcher-view:nth-child(36) {
+    transition-delay: 136ms
+  }
+  .item-rental__content div div img._watcher-view:nth-child(37) {
+    transition-delay: 137ms
+  }
+  .item-rental__content div div img._watcher-view:nth-child(38) {
+    transition-delay: 138ms
+  }
+  .item-rental__content div div img._watcher-view:nth-child(39) {
+    transition-delay: 139ms
+  }
+  .item-rental__content div div img._watcher-view:nth-child(40) {
+    transition-delay: .14s
+  }
+  .item-rental__content div div img._watcher-view:nth-child(41) {
+    transition-delay: 141ms
+  }
+  .item-rental__content div div img._watcher-view:nth-child(42) {
+    transition-delay: 142ms
+  }
+  .item-rental__content div div img._watcher-view:nth-child(43) {
+    transition-delay: 143ms
+  }
+  .item-rental__content div div img._watcher-view:nth-child(44) {
+    transition-delay: 144ms
+  }
+  .item-rental__content div div img._watcher-view:nth-child(45) {
+    transition-delay: 145ms
+  }
+  .item-rental__content div div img._watcher-view:nth-child(46) {
+    transition-delay: 146ms
+  }
+  .item-rental__content div div img._watcher-view:nth-child(47) {
+    transition-delay: 147ms
+  }
+  .item-rental__content div div img._watcher-view:nth-child(48) {
+    transition-delay: 148ms
+  }
+  .item-rental__content div div img._watcher-view:nth-child(49) {
+    transition-delay: 149ms
+  }
+  .item-rental__content div div img._watcher-view:nth-child(50) {
+    transition-delay: .15s
+  }
+  .item-rental__content div div img._watcher-view:nth-child(51) {
+    transition-delay: 151ms
+  }
+  .item-rental__content div div img._watcher-view:nth-child(52) {
+    transition-delay: 152ms
+  }
+  .item-rental__content div div img._watcher-view:nth-child(53) {
+    transition-delay: 153ms
+  }
+  .item-rental__content div div img._watcher-view:nth-child(54) {
+    transition-delay: 154ms
+  }
+  .item-rental__content div div img._watcher-view:nth-child(55) {
+    transition-delay: 155ms
+  }
+  .item-rental__content div div img._watcher-view:nth-child(56) {
+    transition-delay: 156ms
+  }
+  .item-rental__content div div img._watcher-view:nth-child(57) {
+    transition-delay: 157ms
+  }
+  .item-rental__content div div img._watcher-view:nth-child(58) {
+    transition-delay: 158ms
+  }
+  .item-rental__content div div img._watcher-view:nth-child(59) {
+    transition-delay: 159ms
+  }
+  .item-rental__content div div img._watcher-view:nth-child(60) {
+    transition-delay: .16s
+  }
+  .item-rental__content div div img._watcher-view:nth-child(61) {
+    transition-delay: 161ms
+  }
+  .item-rental__content div div img._watcher-view:nth-child(62) {
+    transition-delay: 162ms
+  }
+  .item-rental__content div div img._watcher-view:nth-child(63) {
+    transition-delay: 163ms
+  }
+  .item-rental__content div div img._watcher-view:nth-child(64) {
+    transition-delay: 164ms
+  }
+  .item-rental__content div div img._watcher-view:nth-child(65) {
+    transition-delay: 165ms
+  }
+  .item-rental__content div div img._watcher-view:nth-child(66) {
+    transition-delay: 166ms
+  }
+  .item-rental__content div div img._watcher-view:nth-child(67) {
+    transition-delay: 167ms
+  }
+  .item-rental__content div div img._watcher-view:nth-child(68) {
+    transition-delay: 168ms
+  }
+  .item-rental__content div div img._watcher-view:nth-child(69) {
+    transition-delay: 169ms
+  }
+  .item-rental__content div div img._watcher-view:nth-child(70) {
+    transition-delay: .17s
+  }
+  .item-rental__content div div img._watcher-view:nth-child(71) {
+    transition-delay: 171ms
+  }
+  .item-rental__content div div img._watcher-view:nth-child(72) {
+    transition-delay: 172ms
+  }
+  .item-rental__content div div img._watcher-view:nth-child(73) {
+    transition-delay: 173ms
+  }
+  .item-rental__content div div img._watcher-view:nth-child(74) {
+    transition-delay: 174ms
+  }
+  .item-rental__content div div img._watcher-view:nth-child(75) {
+    transition-delay: 175ms
+  }
+  .item-rental__content div div img._watcher-view:nth-child(76) {
+    transition-delay: 176ms
+  }
+  .item-rental__content div div img._watcher-view:nth-child(77) {
+    transition-delay: 177ms
+  }
+  .item-rental__content div div img._watcher-view:nth-child(78) {
+    transition-delay: 178ms
+  }
+  .item-rental__content div div img._watcher-view:nth-child(79) {
+    transition-delay: 179ms
+  }
+  .item-rental__content div div img._watcher-view:nth-child(80) {
+    transition-delay: .18s
+  }
+  .item-rental__content div div img._watcher-view:nth-child(81) {
+    transition-delay: 181ms
+  }
+  .item-rental__content div div img._watcher-view:nth-child(82) {
+    transition-delay: 182ms
+  }
+  .item-rental__content div div img._watcher-view:nth-child(83) {
+    transition-delay: 183ms
+  }
+  .item-rental__content div div img._watcher-view:nth-child(84) {
+    transition-delay: 184ms
+  }
+  .item-rental__content div div img._watcher-view:nth-child(85) {
+    transition-delay: 185ms
+  }
+  .item-rental__content div div img._watcher-view:nth-child(86) {
+    transition-delay: 186ms
+  }
+  .item-rental__content div div img._watcher-view:nth-child(87) {
+    transition-delay: 187ms
+  }
+  .item-rental__content div div img._watcher-view:nth-child(88) {
+    transition-delay: 188ms
+  }
+  .item-rental__content div div img._watcher-view:nth-child(89) {
+    transition-delay: 189ms
+  }
+  .item-rental__content div div img._watcher-view:nth-child(90) {
+    transition-delay: .19s
+  }
+  .item-rental__content div div img._watcher-view:nth-child(91) {
+    transition-delay: 191ms
+  }
+  .item-rental__content div div img._watcher-view:nth-child(92) {
+    transition-delay: 192ms
+  }
+  .item-rental__content div div img._watcher-view:nth-child(93) {
+    transition-delay: 193ms
+  }
+  .item-rental__content div div img._watcher-view:nth-child(94) {
+    transition-delay: 194ms
+  }
+  .item-rental__content div div img._watcher-view:nth-child(95) {
+    transition-delay: 195ms
+  }
+  .item-rental__content div div img._watcher-view:nth-child(96) {
+    transition-delay: 196ms
+  }
+  .item-rental__content div div img._watcher-view:nth-child(97) {
+    transition-delay: 197ms
+  }
+  .item-rental__content div div img._watcher-view:nth-child(98) {
+    transition-delay: 198ms
+  }
+  .item-rental__content div div img._watcher-view:nth-child(99) {
+    transition-delay: 199ms
+  }
+  .item-rental__content div div img._watcher-view:nth-child(100) {
+    transition-delay: .2s
+  }
 }
 @media (max-width:47.99875em)and (any-hover:none) {
   .icon-menu {
@@ -2576,6 +2635,13 @@ html {
     border: 2px solid var(--chili,#be4c40);
     background: var(--chili,#be4c40);
     box-shadow: 8px 8px 20px 0 rgba(66,4,0,.2)
+  }
+  .block-header .social__link:hover {
+    transition-delay: 0s!important
+  }
+  .block-header .social__link:hover::before {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05)
   }
   [class*=_link]:hover {
     color: #be4c40
